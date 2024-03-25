@@ -7,7 +7,7 @@ const Navbar = () => {
       <NavLink to="/" className={navLinkStyleClasses}>
         Home
       </NavLink>
-      <NavLink to="/listed-book" className={navLinkStyleClasses}>
+      <NavLink to="/listed-books" className={navLinkStyleClasses}>
         Listed Books
       </NavLink>
       <NavLink to="/pages-to-read" className={navLinkStyleClasses}>
@@ -29,7 +29,7 @@ const Navbar = () => {
             {link}
           </ul>
         </div>
-        <Link to="/" className="text-2xl md:text-[1.75rem] font-bold text-dark">
+        <Link to="/" className="font-work-sans text-2xl md:text-[1.75rem] font-bold text-dark">
           Book Vibe
         </Link>
       </div>
