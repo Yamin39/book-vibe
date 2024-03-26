@@ -9,9 +9,9 @@ const BookDetails = () => {
   const { image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating } = book;
 
   return (
-    <div className="flex flex-col lg:flex-row gap-12">
-      <div className="w-[24rem] mx-auto lg:w-[45%] p-10 bg-dark-5 px-6 py-14 rounded-2xl flex justify-center items-center">
-        <img className="h-full w-[80%]" src={image} alt={bookName} />
+    <div className="flex flex-col lg:items-center lg:flex-row gap-12">
+      <div className="w-[24rem] h-[36.875rem] mx-auto lg:w-[45%] p-10 bg-dark-5 px-6 py-14 rounded-2xl flex justify-center items-center">
+        <img className="h-full" src={image} alt={bookName} />
       </div>
       <div className="lg:w-[55%] flex flex-col justify-between">
         <div>
@@ -23,7 +23,7 @@ const BookDetails = () => {
             {review}
           </p>
         </div>
-        <div className="mt-8">
+        <div className="mt-4">
           <ul className="flex gap-3 items-center flex-wrap">
             <li className="text-dark font-bold mr-1">Tag</li>
             {tags.map((tag, i) => (
