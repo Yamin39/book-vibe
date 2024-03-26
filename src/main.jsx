@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import BookDetails from "./pages/BookDetails/BookDetails.jsx";
 import Home from "./pages/Home/Home.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
 import Root from "./Routes/Root.jsx";
-import BookDetails from "./pages/BookDetails/BookDetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,9 +18,10 @@ const router = createBrowserRouter([
         element: <Home></Home>,
       },
       {
-        path: "/1",
-        element: <BookDetails></BookDetails>
-      }
+        path: "/book-details/:bookId",
+        loader: () => fetch("/books.json"),
+        element: <BookDetails></BookDetails>,
+      },
     ],
   },
 ]);

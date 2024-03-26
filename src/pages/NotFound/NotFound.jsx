@@ -7,7 +7,6 @@ const NotFound = () => {
       <h1 className="mb-4 text-6xl font-semibold text-red-500">{error.status}</h1>
       <p>
         <i>{error.statusText}</i> <br />
-        <i>{error.error.message}</i>
       </p>
       <p className="mb-4 text-lg mt-2">Oops! Looks like you&#39;re lost.</p>
       <div className="animate-bounce">

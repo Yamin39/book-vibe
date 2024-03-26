@@ -7,6 +7,7 @@ export default {
         dark: "#131313",
         "primary-green": "#23BE0A",
         "dark-80": "#131313CC",
+        "dark-70": "#131313B3",
         "dark-15": "#13131326",
         "dark-5": "#1313130D",
       },

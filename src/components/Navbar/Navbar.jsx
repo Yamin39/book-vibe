@@ -29,7 +29,7 @@ const Navbar = () => {
             {link}
           </ul>
         </div>
-        <Link to="/" className="font-work-sans text-2xl md:text-[1.75rem] font-bold text-dark">
+        <Link to="/" className="text-2xl md:text-[1.75rem] font-bold text-dark">
           Book Vibe
         </Link>
       </div>
