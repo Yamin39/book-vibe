@@ -8,7 +8,7 @@
     "totalPages": 180,
     "rating": 4.5,
     "category": "Fiction",
-    "tags": ["Classic", "Romance", "Drama"],
+    "tags": ["Romance", "Drama", "Classy"],
     "publisher": "Scribner",
     "yearOfPublishing": 1925
   },
@@ -21,7 +21,7 @@
     "totalPages": 336,
     "rating": 4.7,
     "category": "Fantasy",
-    "tags": ["Magic", "Wizardry", "Children's Literature"],
+    "tags": ["Magic", "Wizardry"],
     "publisher": "Bloomsbury",
     "yearOfPublishing": 1997
   },
@@ -34,7 +34,7 @@
     "totalPages": 281,
     "rating": 4.7,
     "category": "Fiction",
-    "tags": ["Classic", "Legal Drama", "Coming of Age"],
+    "tags": ["Legal Drama", "Coming of Age"],
     "publisher": "J. B. Lippincott & Co.",
     "yearOfPublishing": 1960
   },
@@ -47,7 +47,7 @@
     "totalPages": 224,
     "rating": 4.3,
     "category": "Fiction",
-    "tags": ["Coming of Age", "Literary Fiction", "Identity"],
+    "tags": ["Literary Fiction", "Identity"],
     "publisher": "Little, Brown and Company",
     "yearOfPublishing": 1951
   },
@@ -60,7 +60,7 @@
     "totalPages": 432,
     "rating": 4.6,
     "category": "Fiction",
-    "tags": ["Romance", "Classic", "Social Commentary"],
+    "tags": ["Romance", "Classic", "Social"],
     "publisher": "T. Egerton, Whitehall",
     "yearOfPublishing": 1813
   },
@@ -73,7 +73,7 @@
     "totalPages": 310,
     "rating": 4.9,
     "category": "Fantasy",
-    "tags": ["Adventure", "Epic Fantasy", "Children's Literature"],
+    "tags": ["Adventure", "Epic Fantasy"],
     "publisher": "Allen & Unwin",
     "yearOfPublishing": 1937
   }
