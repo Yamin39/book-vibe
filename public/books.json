@@ -1,0 +1,80 @@
+[
+  {
+    "bookId": 1,
+    "bookName": "The Great Gatsby",
+    "author": "F. Scott Fitzgerald",
+    "image": "https://i.ibb.co/Xts8XgT/kindpng-7318921.png",
+    "review": "A timeless classic exploring the decadence of the Jazz Age and the elusive American Dream.",
+    "totalPages": 180,
+    "rating": 4.5,
+    "category": "Fiction",
+    "tags": ["Classic", "Romance", "Drama"],
+    "publisher": "Scribner",
+    "yearOfPublishing": 1925
+  },
+  {
+    "bookId": 2,
+    "bookName": "Harry Potter and the Philosopher's Stone",
+    "author": "J.K. Rowling",
+    "image": "https://i.ibb.co/3s6yyDX/kindpng-81724-1.png",
+    "review": "A captivating start to the beloved Harry Potter series, filled with magic, friendship, and adventure.",
+    "totalPages": 336,
+    "rating": 4.7,
+    "category": "Fantasy",
+    "tags": ["Magic", "Wizardry", "Children's Literature"],
+    "publisher": "Bloomsbury",
+    "yearOfPublishing": 1997
+  },
+  {
+    "bookId": 3,
+    "bookName": "To Kill a Mockingbird",
+    "author": "Harper Lee",
+    "image": "https://i.ibb.co/tZmGZjj/pngwing-1.png",
+    "review": "A poignant exploration of racial injustice and moral growth in the American South.",
+    "totalPages": 281,
+    "rating": 4.7,
+    "category": "Fiction",
+    "tags": ["Classic", "Legal Drama", "Coming of Age"],
+    "publisher": "J. B. Lippincott & Co.",
+    "yearOfPublishing": 1960
+  },
+  {
+    "bookId": 4,
+    "bookName": "The Catcher in the Rye",
+    "author": "J.D. Salinger",
+    "image": "https://i.ibb.co/H2TbZYS/kindpng-5624060-1.png",
+    "review": "A rebellious teenager's journey of self-discovery and alienation in society.",
+    "totalPages": 224,
+    "rating": 4.3,
+    "category": "Fiction",
+    "tags": ["Coming of Age", "Literary Fiction", "Identity"],
+    "publisher": "Little, Brown and Company",
+    "yearOfPublishing": 1951
+  },
+  {
+    "bookId": 5,
+    "bookName": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "image": "https://i.ibb.co/6PXGTC5/kindpng-4022054-1.png",
+    "review": "A charming romance set in the English countryside, exploring themes of class and marriage.",
+    "totalPages": 432,
+    "rating": 4.6,
+    "category": "Fiction",
+    "tags": ["Romance", "Classic", "Social Commentary"],
+    "publisher": "T. Egerton, Whitehall",
+    "yearOfPublishing": 1813
+  },
+  {
+    "bookId": 6,
+    "bookName": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "image": "https://i.ibb.co/9pcvtnV/kindpng-4945926-1.png",
+    "review": "An enchanting tale of adventure and friendship in Middle-earth.",
+    "totalPages": 310,
+    "rating": 4.9,
+    "category": "Fantasy",
+    "tags": ["Adventure", "Epic Fantasy", "Children's Literature"],
+    "publisher": "Allen & Unwin",
+    "yearOfPublishing": 1937
+  }
+]
