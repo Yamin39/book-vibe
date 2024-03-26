@@ -4,7 +4,7 @@ import bannerBook from "../../assets/images/banner-book.png";
 const Banner = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col-reverse lg:flex-row gap-8 md:gap-20 bg-dark-5 py-20 rounded-3xl justify-center items-center px-10">
+    <div className="flex flex-col-reverse lg:flex-row gap-8 md:gap-20 bg-dark-5 py-20 rounded-3xl justify-center items-center px-10 mb-24">
       <div className="text-center lg:text-left">
         <h1 className="max-w-[32.875rem] mb-12 font-playfair-display font-bold text-[3.5rem] text-dark">Books to freshen up your bookshelf</h1>
         <button

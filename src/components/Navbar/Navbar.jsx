@@ -17,7 +17,7 @@ const Navbar = () => {
   );
 
   return (
-    <nav className="navbar p-0 py-12 justify-between">
+    <nav className="navbar p-0 pb-12 justify-between">
       <div>
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn min-h-0 px-2 py-1 mr-1 btn-ghost lg:hidden">
