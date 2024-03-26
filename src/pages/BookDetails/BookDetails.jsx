@@ -1,4 +1,8 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { getStoredReadBooks, storeReadBooks } from "../../utilities/readList";
+import { getStoredWishBooks, storeWishBooks } from "../../utilities/wishList";
 
 const BookDetails = () => {
   const books = useLoaderData();
@@ -6,7 +10,61 @@ const BookDetails = () => {
 
   const book = books.find((book) => book.bookId === parseInt(bookId));
 
-  const { image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating } = book;
+  const { bookId: id, image, bookName, author, category, review, tags, totalPages, publisher, yearOfPublishing, rating } = book;
+
+  const successNotify = (message) =>
+    toast.success(message, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+  const errorNotify = (message) =>
+    toast.error(message, {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+
+  const handlerWishListBtn = () => {
+    const storedReadListBooks = getStoredReadBooks();
+    const storedWishBooks = getStoredWishBooks();
+    if (!storedReadListBooks.includes(id)) {
+      storeWishBooks(id);
+      if (!storedWishBooks.includes(id)) {
+        successNotify("Book Added to Wishlist");
+      } else {
+        errorNotify("You have already added this book to Wishlist");
+      }
+    } else {
+      errorNotify("You have already read this book");
+    }
+  };
+
+  const handlerReadListBtn = () => {
+    const storedReadListBooks = getStoredReadBooks();
+    const storedWishBooks = getStoredWishBooks();
+    if (!storedReadListBooks.includes(id)) {
+      storeReadBooks(id);
+      successNotify("Book added to read list");
+      if (storedWishBooks.includes(id)) {
+        const removedWishListBooks = storedWishBooks.filter((storedWishBook) => storedWishBook !== id);
+        localStorage.setItem("wishListBooks", JSON.stringify(removedWishListBooks));
+      }
+    } else {
+      errorNotify("You have already read this book");
+    }
+  };
 
   return (
     <div className="flex flex-col lg:items-center lg:flex-row gap-12">
@@ -54,15 +112,22 @@ const BookDetails = () => {
             </tbody>
           </table>
           <div className="space-x-4 mt-4">
-            <button className="btn hover:opacity-80 hover:bg-transparent py-3 min-h-0 md:text-lg font-semibold md:px-7 md:py-[1.125rem] h-auto bg-transparent border border-[#1313134D] text-black">
+            <button
+              onClick={handlerReadListBtn}
+              className="btn hover:opacity-80 hover:bg-transparent py-3 min-h-0 md:text-lg font-semibold md:px-7 md:py-[1.125rem] h-auto bg-transparent border border-[#1313134D] text-black"
+            >
               Read
             </button>
-            <button className="btn hover:opacity-80 hover:bg-[#50B1C9] py-3 min-h-0 md:text-lg font-semibold text-white md:px-7 md:py-[1.125rem] h-auto bg-[#50B1C9]">
+            <button
+              onClick={handlerWishListBtn}
+              className="btn hover:opacity-80 hover:bg-[#50B1C9] py-3 min-h-0 md:text-lg font-semibold text-white md:px-7 md:py-[1.125rem] h-auto bg-[#50B1C9]"
+            >
               Wishlist
             </button>
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };
