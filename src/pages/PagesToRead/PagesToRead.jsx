@@ -19,7 +19,7 @@ const TriangleBar = ({ fill, x, y, width, height }) => {
 
 const PagesToRead = () => {
   const books = useLoaderData();
-  const [readListBooks, setReadListBooks] = useState();
+  const [readListBooks, setReadListBooks] = useState([]);
 
   useEffect(() => {
     const storedReadBooksIds = getStoredReadBooks();
@@ -47,7 +47,7 @@ const PagesToRead = () => {
           {/* interval={0} */}
           <YAxis />
           <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: "top" }}>
-            {readListBooks && readListBooks.map((entry, index) => <Cell key={`cell-${index}`} fill={colors[index % 20]} />)}
+            {readListBooks.map((entry, index) => <Cell key={`cell-${index}`} fill={colors[index % 20]} />)}
           </Bar>
         </BarChart>
       </ResponsiveContainer>

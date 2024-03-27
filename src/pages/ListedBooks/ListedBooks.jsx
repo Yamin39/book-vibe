@@ -15,7 +15,7 @@ const ListedBooks = () => {
 
   const books = useLoaderData();
 
-  const [wishListBooks, setWishListBooks] = useState();
+  const [wishListBooks, setWishListBooks] = useState([]);
 
   useEffect(() => {
     const storedWishBooksIds = getStoredWishBooks();
@@ -23,7 +23,7 @@ const ListedBooks = () => {
     setWishListBooks(wishBooks);
   }, [books]);
 
-  const [readListBooks, setReadListBooks] = useState();
+  const [readListBooks, setReadListBooks] = useState([]);
 
   useEffect(() => {
     const storedReadBooksIds = getStoredReadBooks();
@@ -60,14 +60,18 @@ const ListedBooks = () => {
           <input type="radio" name="my_tabs_2" role="tab" className="tab" style={{ width: "max-content" }} aria-label="Read Books" defaultChecked />
           <div role="tabpanel" style={borderStyles} className="tab-content bg-base-100 border-base-300 rounded-box p-6">
             <div className="space-y-6">
-              {readListBooks && readListBooks.map((readListBook) => <ListedBooksCard key={readListBook.bookId} listBook={readListBook}></ListedBooksCard>)}
+              {readListBooks.map((readListBook) => (
+                <ListedBooksCard key={readListBook.bookId} listBook={readListBook}></ListedBooksCard>
+              ))}
             </div>
           </div>
 
           <input type="radio" name="my_tabs_2" role="tab" className="tab" style={{ width: "max-content" }} aria-label="Wishlist Books" />
           <div role="tabpanel" style={borderStyles} className="tab-content bg-base-100 border-base-300 rounded-box p-6">
             <div className="space-y-6">
-              {wishListBooks && wishListBooks.map((wishListBook) => <ListedBooksCard key={wishListBook.bookId} listBook={wishListBook}></ListedBooksCard>)}
+              {wishListBooks.map((wishListBook) => (
+                <ListedBooksCard key={wishListBook.bookId} listBook={wishListBook}></ListedBooksCard>
+              ))}
             </div>
           </div>
         </div>
