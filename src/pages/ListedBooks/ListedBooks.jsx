@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { useLoaderData } from "react-router-dom";
+import ListedBooksCard from "../../components/ListedBooksCard/ListedBooksCard";
 import { getStoredReadBooks } from "../../utilities/readList";
 import { getStoredWishBooks } from "../../utilities/wishList";
 
@@ -56,32 +57,18 @@ const ListedBooks = () => {
 
       <div>
         <div role="tablist" className="tabs tabs-lifted tabs-lg">
-          <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Read Books" defaultChecked />
+          <input type="radio" name="my_tabs_2" role="tab" className="tab" style={{ width: "max-content" }} aria-label="Read Books" defaultChecked />
           <div role="tabpanel" style={borderStyles} className="tab-content bg-base-100 border-base-300 rounded-box p-6">
-            {/* Tab content 1 */}
-            <h1>Read list books</h1>
-            <ul>
-              {readListBooks &&
-                readListBooks.map((readListBook) => (
-                  <li key={readListBook.bookId}>
-                    book id: {readListBook.bookId}, book name: {readListBook.bookName}
-                  </li>
-                ))}
-            </ul>
+            <div className="space-y-6">
+              {readListBooks && readListBooks.map((readListBook) => <ListedBooksCard key={readListBook.bookId} listBook={readListBook}></ListedBooksCard>)}
+            </div>
           </div>
 
-          <input type="radio" name="my_tabs_2" role="tab" className="tab" aria-label="Wishlist Books" />
-          <div role="tabpanel" style={borderStyles} className="tab-content bg-base-100 border-base-300 rounded-box p-6 border-b">
-            {/* Tab content 2 */}
-            <h1>Wish list books</h1>
-            <ul>
-              {wishListBooks &&
-                wishListBooks.map((wishListBook) => (
-                  <li key={wishListBook.bookId}>
-                    book id: {wishListBook.bookId}, book name: {wishListBook.bookName}
-                  </li>
-                ))}
-            </ul>
+          <input type="radio" name="my_tabs_2" role="tab" className="tab" style={{ width: "max-content" }} aria-label="Wishlist Books" />
+          <div role="tabpanel" style={borderStyles} className="tab-content bg-base-100 border-base-300 rounded-box p-6">
+            <div className="space-y-6">
+              {wishListBooks && wishListBooks.map((wishListBook) => <ListedBooksCard key={wishListBook.bookId} listBook={wishListBook}></ListedBooksCard>)}
+            </div>
           </div>
         </div>
       </div>

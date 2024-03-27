@@ -44,7 +44,7 @@ const BookDetails = () => {
       if (!storedWishBooks.includes(id)) {
         successNotify("Book Added to Wishlist");
       } else {
-        errorNotify("You have already added this book to Wishlist");
+        errorNotify("This book is already added to Wishlist");
       }
     } else {
       errorNotify("You have already read this book");
