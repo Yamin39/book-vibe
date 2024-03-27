@@ -24,12 +24,22 @@ const ListedBooks = () => {
   }, [books]);
 
   const [readListBooks, setReadListBooks] = useState([]);
+  const [displayReadListBooks, setDisplayReadListBooks] = useState([]);
 
   useEffect(() => {
     const storedReadBooksIds = getStoredReadBooks();
     const ReadBooks = books.filter((book) => storedReadBooksIds.includes(book.bookId));
+    // console.log("default obj = ", ReadBooks);
     setReadListBooks(ReadBooks);
+    setDisplayReadListBooks(ReadBooks);
   }, [books]);
+
+  console.log("default obj = ", readListBooks);
+
+  function handleReadListSort(sortCommand) {
+    setDisplayReadListBooks([...readListBooks].sort((a, b) => b[sortCommand] - a[sortCommand]));
+    console.log("sorted obj = ", displayReadListBooks);
+  }
 
   return (
     <div>
@@ -42,13 +52,13 @@ const ListedBooks = () => {
             <span className="font-semibold">Sort By</span> <IoIosArrowDown />
           </div>
           <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-            <li>
+            <li onClick={() => handleReadListSort("rating")}>
               <a>Rating</a>
             </li>
-            <li>
+            <li onClick={() => handleReadListSort("totalPages")}>
               <a>Number of pages</a>
             </li>
-            <li>
+            <li onClick={() => handleReadListSort("yearOfPublishing")}>
               <a>Published year</a>
             </li>
           </ul>
@@ -60,7 +70,7 @@ const ListedBooks = () => {
           <input type="radio" name="my_tabs_2" role="tab" className="tab" style={{ width: "max-content" }} aria-label="Read Books" defaultChecked />
           <div role="tabpanel" style={borderStyles} className="tab-content bg-base-100 border-base-300 rounded-box p-6">
             <div className="space-y-6">
-              {readListBooks.map((readListBook) => (
+              {displayReadListBooks.map((readListBook) => (
                 <ListedBooksCard key={readListBook.bookId} listBook={readListBook}></ListedBooksCard>
               ))}
             </div>
