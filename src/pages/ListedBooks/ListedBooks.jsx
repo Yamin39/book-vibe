@@ -16,11 +16,13 @@ const ListedBooks = () => {
   const books = useLoaderData();
 
   const [wishListBooks, setWishListBooks] = useState([]);
+  const [displayWishListBooks, setDisplayWishListBooks] = useState([]);
 
   useEffect(() => {
     const storedWishBooksIds = getStoredWishBooks();
     const wishBooks = books.filter((book) => storedWishBooksIds.includes(book.bookId));
     setWishListBooks(wishBooks);
+    setDisplayWishListBooks(wishBooks);
   }, [books]);
 
   const [readListBooks, setReadListBooks] = useState([]);
@@ -29,15 +31,13 @@ const ListedBooks = () => {
   useEffect(() => {
     const storedReadBooksIds = getStoredReadBooks();
     const ReadBooks = books.filter((book) => storedReadBooksIds.includes(book.bookId));
-    // console.log("default obj = ", ReadBooks);
     setReadListBooks(ReadBooks);
     setDisplayReadListBooks(ReadBooks);
   }, [books]);
 
-  console.log("default obj = ", readListBooks);
-
   function handleReadListSort(sortCommand) {
     setDisplayReadListBooks([...readListBooks].sort((a, b) => b[sortCommand] - a[sortCommand]));
+    setDisplayWishListBooks([...wishListBooks].sort((a, b) => b[sortCommand] - a[sortCommand]));
     console.log("sorted obj = ", displayReadListBooks);
   }
 
@@ -79,7 +79,7 @@ const ListedBooks = () => {
           <input type="radio" name="my_tabs_2" role="tab" className="tab" style={{ width: "max-content" }} aria-label="Wishlist Books" />
           <div role="tabpanel" style={borderStyles} className="tab-content bg-base-100 border-base-300 rounded-box p-6">
             <div className="space-y-6">
-              {wishListBooks.map((wishListBook) => (
+              {displayWishListBooks.map((wishListBook) => (
                 <ListedBooksCard key={wishListBook.bookId} listBook={wishListBook}></ListedBooksCard>
               ))}
             </div>
