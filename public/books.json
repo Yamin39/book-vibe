@@ -34,7 +34,7 @@
     "totalPages": 281,
     "rating": 4.7,
     "category": "Fiction",
-    "tags": ["Legal Drama", "Coming of Age"],
+    "tags": ["Prejudice", "Law"],
     "publisher": "J. B. Lippincott & Co.",
     "yearOfPublishing": 1960
   },
@@ -47,7 +47,7 @@
     "totalPages": 224,
     "rating": 4.3,
     "category": "Fiction",
-    "tags": ["Literary Fiction", "Identity"],
+    "tags": ["Angst", "Identity"],
     "publisher": "Little, Brown and Company",
     "yearOfPublishing": 1951
   },
@@ -60,7 +60,7 @@
     "totalPages": 432,
     "rating": 4.6,
     "category": "Fiction",
-    "tags": ["Romance", "Classic", "Social"],
+    "tags": ["Classic", "Social"],
     "publisher": "T. Egerton, Whitehall",
     "yearOfPublishing": 1813
   },
@@ -73,7 +73,7 @@
     "totalPages": 310,
     "rating": 4.9,
     "category": "Fantasy",
-    "tags": ["Adventure", "Epic Fantasy"],
+    "tags": ["Adventure", "Fantasy"],
     "publisher": "Allen & Unwin",
     "yearOfPublishing": 1937
   }
