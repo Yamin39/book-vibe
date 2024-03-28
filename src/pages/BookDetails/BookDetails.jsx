@@ -68,7 +68,7 @@ const BookDetails = () => {
 
   return (
     <div className="flex flex-col lg:items-center lg:flex-row gap-12">
-      <div className="w-[24rem] h-[36.875rem] mx-auto lg:w-[45%] p-10 bg-dark-5 px-6 py-14 rounded-2xl flex justify-center items-center">
+      <div className="w-[24rem] h-60 lg:h-[36.875rem] mx-auto lg:w-[45%] p-10 bg-dark-5 px-6 md:py-14 rounded-2xl flex justify-center items-center">
         <img className="h-full" src={image} alt={bookName} />
       </div>
       <div className="lg:w-[55%] flex flex-col justify-between">
