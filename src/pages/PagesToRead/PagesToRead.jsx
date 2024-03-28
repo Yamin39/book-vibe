@@ -34,7 +34,7 @@ const PagesToRead = () => {
           <BarChart
             data={readListBooks}
             margin={{
-              top: 5,
+              top: 15,
               right: 30,
               left: 20,
               bottom: 40,
