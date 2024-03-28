@@ -10,7 +10,10 @@ const Faq = () => {
           <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title text-xl font-medium">How do I mark a book as &quot;read&quot; on your website?</div>
           <div className="collapse-content">
-            <p>After finishing a book, you can mark it as &quot;read&quot; by clicking on the &quot;Read&quot; button on the book details page.</p>
+            <p>
+              After finishing a book, you can mark it as &quot;read&quot; by clicking on the &quot;Read&quot; button on the book details page. You can find a
+              list of marked as read books at &quot;Read Books&quot; tab in listed books page
+            </p>
           </div>
         </div>
         <div className="collapse collapse-arrow bg-base-200">

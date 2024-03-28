@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
+import Blogs from "./pages/Blogs/Blogs.jsx";
 import BookDetails from "./pages/BookDetails/BookDetails.jsx";
 import Contact from "./pages/Contact/Contact.jsx";
 import Home from "./pages/Home/Home.jsx";
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
         path: "/pages-to-read",
         loader: () => fetch("/books.json"),
         element: <PagesToRead></PagesToRead>,
+      },
+      {
+        path: "/blogs",
+        loader: () => fetch("/blogs.json"),
+        element: <Blogs></Blogs>,
       },
       {
         path: "/contact",
