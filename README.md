@@ -8,7 +8,7 @@ live site URL: [Book Vibe](https://book-vibe-yamin39-assign-eight.netlify.app/)
 
 ## Features and Characteristics
 
-Book Vibe have many features. Such as,
+Book Vibe have many features and characteristics. Such as,
 
 - Various types of books are found here.
 - Dedicated page to see book details.

@@ -42,7 +42,7 @@ const PagesToRead = () => {
           >
             <Tooltip></Tooltip>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis className="text-[0.5rem] sm:text-xs" dataKey="bookName" interval={0} tick={<CustomXAxisTick width={(400 - 80) / 7} />} />
+            <XAxis className="text-[0.5rem] sm:text-base" dataKey="bookName" interval={0} tick={<CustomXAxisTick width={(400 - 80) / 7} />} />
             <YAxis />
             <Bar dataKey="totalPages" fill="#8884d8" shape={<TriangleBar />} label={{ position: "top" }}>
               {readListBooks.map((entry, index) => (

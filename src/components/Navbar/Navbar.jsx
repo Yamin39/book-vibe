@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const navLinkStyleClasses = "text-lg text-dark-80 py-[0.875rem] px-[1.063rem] mr-4 hover:text-primary-green";
+  const navLinkStyleClasses = "xl:text-lg text-dark-80 py-[0.875rem] px-2 xl:px-[1rem] mr-4 lg:mr-2 xl:mr-4 hover:text-primary-green";
   const link = (
     <>
       <NavLink to="/" className={navLinkStyleClasses}>
@@ -12,6 +12,12 @@ const Navbar = () => {
       </NavLink>
       <NavLink to="/pages-to-read" className={navLinkStyleClasses}>
         Pages to Read
+      </NavLink>
+      <NavLink to="/about" className={navLinkStyleClasses}>
+        About
+      </NavLink>
+      <NavLink to="/contact" className={navLinkStyleClasses}>
+        Contact
       </NavLink>
     </>
   );
@@ -29,18 +35,18 @@ const Navbar = () => {
             {link}
           </ul>
         </div>
-        <Link to="/" className="text-2xl md:text-[1.75rem] font-bold text-dark">
+        <Link to="/" className="text-2xl md:text-[1.75rem] font-bold text-dark w-max">
           Book Vibe
         </Link>
       </div>
-      <div className="hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{link}</ul>
+      <div className="hidden lg:flex mx-2">
+        <ul className="menu menu-horizontal justify-center px-1">{link}</ul>
       </div>
-      <div className="space-x-2 md:space-x-4">
-        <button className="btn hover:opacity-80 md:text-lg font-semibold py-3 min-h-0 text-white md:px-7 md:py-[1.125rem] h-auto hover:bg-primary-green bg-primary-green">
+      <div className="space-x-2 md:space-x-4 lg:space-x-3 xl:space-x-4">
+        <button className="btn hover:opacity-80 md:text-lg lg:text-sm xl:text-lg font-semibold py-3 min-h-0 text-white md:px-7 lg:px-5 xl:px-7 md:py-[1.125rem] h-auto hover:bg-primary-green bg-primary-green">
           Sign In
         </button>
-        <button className="btn hover:opacity-80 hover:bg-[#59C6D2] py-3 min-h-0 md:text-lg font-semibold text-white md:px-7 md:py-[1.125rem] h-auto bg-[#59C6D2]">
+        <button className="btn hover:opacity-80 hover:bg-[#59C6D2] py-3 min-h-0 md:text-lg lg:text-sm xl:text-lg font-semibold text-white md:px-7 lg:px-5 xl:px-7 md:py-[1.125rem] h-auto bg-[#59C6D2]">
           Sign Up
         </button>
       </div>

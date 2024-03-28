@@ -14,8 +14,18 @@
 
 nav a.active {
   color: rgb(35, 190, 10);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   border: 1px solid rgb(35, 190, 10);
   border-radius: 8px;
+}
+
+@media screen and (max-width:1300px) {
+  nav a.active {
+    font-size: 1rem;
+  }
+  .menu a {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
 }

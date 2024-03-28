@@ -4,7 +4,7 @@ import "./Root.css";
 
 const Root = () => {
   return (
-    <div className="w-10/12 mx-auto max-w-[1440px] my-12 font-work-sans">
+    <div className="w-10/12 mx-auto max-w-[1440px] mt-6 sm:mt-10 mb-12 font-work-sans">
       <Navbar></Navbar>
       <Outlet></Outlet>
     </div>
