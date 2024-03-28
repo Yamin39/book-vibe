@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 
 const ContactForm = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-8 bg-[#55bcc833] p-6 lg:p-14 rounded-3xl justify-center items-center mb-12">
+    <div className="flex flex-col lg:flex-row gap-8 bg-[#55bcc833] p-6 lg:p-14 rounded-3xl justify-evenly items-center mb-12">
       <div className="w-full md:w-fit flex flex-col justify-center gap-6">
         <div>
           <h2 className="text-[1.75rem] font-bold font-playfair-display mb-2 text-dark">Get in touch</h2>
