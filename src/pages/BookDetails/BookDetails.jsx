@@ -114,13 +114,13 @@ const BookDetails = () => {
           <div className="space-x-4 mt-4">
             <button
               onClick={handlerReadListBtn}
-              className="btn hover:opacity-80 hover:bg-transparent py-3 min-h-0 md:text-lg font-semibold md:px-7 md:py-[1.125rem] h-auto bg-transparent border border-[#1313134D] text-black"
+              className="btn hover:opacity-80 hover:bg-transparent py-3 min-h-0 text-lg font-semibold md:px-7 md:py-[1.125rem] h-auto bg-transparent border border-[#1313134D] text-black"
             >
               Read
             </button>
             <button
               onClick={handlerWishListBtn}
-              className="btn hover:opacity-80 hover:bg-[#50B1C9] py-3 min-h-0 md:text-lg font-semibold text-white md:px-7 md:py-[1.125rem] h-auto bg-[#50B1C9]"
+              className="btn hover:opacity-80 hover:bg-[#50B1C9] py-3 min-h-0 text-lg font-semibold text-white md:px-7 md:py-[1.125rem] h-auto bg-[#50B1C9]"
             >
               Wishlist
             </button>

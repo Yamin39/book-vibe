@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
-  const navLinkStyleClasses = "xl:text-lg text-dark-80 py-[0.875rem] px-2 xl:px-[1rem] mr-4 lg:mr-2 xl:mr-4 hover:text-primary-green";
+  const navLinkStyleClasses = "xl:text-base text-dark-80 py-[0.875rem] px-2 xl:px-[1rem] mr-4 lg:mr-2 xl:mr-4 hover:text-primary-green";
   const link = (
     <>
       <NavLink to="/" className={navLinkStyleClasses}>

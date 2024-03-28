@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import BookDetails from "./pages/BookDetails/BookDetails.jsx";
+import Contact from "./pages/Contact/Contact.jsx";
 import Home from "./pages/Home/Home.jsx";
 import ListedBooks from "./pages/ListedBooks/ListedBooks.jsx";
 import NotFound from "./pages/NotFound/NotFound.jsx";
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
         path: "/pages-to-read",
         loader: () => fetch("/books.json"),
         element: <PagesToRead></PagesToRead>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
     ],
   },

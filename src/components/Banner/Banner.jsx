@@ -9,7 +9,7 @@ const Banner = () => {
         <h1 className="max-w-[32.875rem] mb-12 font-playfair-display font-bold text-[3.5rem] text-dark">Books to freshen up your bookshelf</h1>
         <button
           onClick={() => navigate("listed-books")}
-          className="btn hover:opacity-80 md:text-lg font-semibold py-3 min-h-0 text-white md:px-7 md:py-[1.125rem] h-auto hover:bg-primary-green bg-primary-green"
+          className="btn hover:opacity-80 text-lg font-semibold py-3 min-h-0 text-white md:px-7 md:py-[1.125rem] h-auto hover:bg-primary-green bg-primary-green"
         >
           View The List
         </button>
