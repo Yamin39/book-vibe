@@ -1,6 +1,6 @@
 # Book Vibe
 
-Welcome to Book Vibe
+Welcome to Book Vibe!
 
 ## Live Site
 
